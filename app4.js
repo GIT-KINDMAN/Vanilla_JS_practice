@@ -6,10 +6,19 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 
+/*
 function onLoginSubmit() {
     const username = loginInput.value;
     console.log(username);
 }
+*/
+
+function onLoginSubmit(event) { // event가 범용으로 쓰이는 argument 이름
+    event.preventDefault(); // 기본동작(여기선 새로고침) 방지 함수
+    //console.log(event);
+    console.log(loginInput.value);
+}
+
 
 loginForm.addEventListener("submit",onLoginSubmit);
 
